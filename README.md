@@ -73,3 +73,10 @@ git push origin master
 ```
 
 You're now ready to continuously ship! ✨ 💅 🛳
+
+
+Run tests
+```
+docker-compose run web bash
+python3.6 manage.py test
+```

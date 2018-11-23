@@ -5,6 +5,9 @@ django-configurations==2.1
 gunicorn==19.9.0
 newrelic==4.4.1.104
 
+# Other libraries
+requests
+
 # For the persistence stores
 psycopg2-binary==2.7.5
 dj-database-url==0.5.0
@@ -24,16 +27,13 @@ ipython==7.1.1
 mkdocs==0.17.5
 flake8==3.6.0
 
+# Heroku
+whitenoise
+
 # Testing
 mock==2.0.0
 factory-boy==2.11.1
 django-nose==1.4.6
 nose-progressive==1.5.1
 coverage==4.5.1
-
-# Static and Media Storage
-django-storages==1.7.1
-boto3==1.9.37
-
-requests
 

@@ -86,7 +86,7 @@ class MovieViewSet(viewsets.ViewSet):
                       imdbID=body['imdbID'])
         movie.save()
         serializer = MovieSerializer(movie)
-        return Response(serializer.data)
+        return Response(serializer.data, status=201)
 
     def retrieve(self, request, pk=None):
         queryset = Movie.objects.all()
@@ -122,7 +122,7 @@ class CommentViewSet(viewsets.ViewSet):
         comment = Comment(movie=movie, body=body)
         comment.save()
         serializer = CommentSerializer(comment)
-        return Response(serializer.data)
+        return Response(serializer.data, status=201)
 
     def retrieve(self, request, pk=None):
         queryset = Comment.objects.all()
