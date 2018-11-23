@@ -5,11 +5,16 @@ from django.contrib import admin
 from django.views.generic.base import RedirectView
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
+
+from movies.films.views import MovieViewSet, CommentViewSet, TopViewSet
 from .users.views import UserViewSet, UserCreateViewSet
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'users', UserCreateViewSet)
+router.register(r'movies', MovieViewSet, basename='Movie')
+router.register(r'comments', CommentViewSet, basename='Comment')
+router.register(r'tops', TopViewSet, basename='Top Movie')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
